@@ -76,6 +76,7 @@ db.movies.find({"synopsis": {$regex:"Bilbo", $not: {$regex:"Gandalf"}}})
 // find all movies that have a synopsis that contains the word "dwarves" or "hobbit"
 
 db.movies.find({$or: [{"synopsis": {$regex:"dwarves"}},{"synopsis": {$regex:"hobbit"}}]})
+db.movies.find({})
 
 
 // find all movies that have a synopsis that contains the word "gold" and "dragon"
@@ -84,14 +85,19 @@ db.movies.find({"synopsis": {$regex: "gold", $regex: "dragon"}})
 
 
 
-// Delete Documents
+                            // Delete Documents
 
 // delete the movie "Pee Wee Herman's Big Adventure"
 
-
+db.movies.deleteOne({"title":"Pee Wee Herman's Big Adventure"})
 
 
 // delete the movie "Avatar"
+
+db.movies.deleteOne({"title":"Avatar"})
+
+
+                                // Relationships
 
 
 
