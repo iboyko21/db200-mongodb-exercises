@@ -99,9 +99,82 @@ db.movies.deleteOne({"title":"Avatar"})
 
                                 // Relationships
 
+// Insert the following documents into a user's collection:
+
+db.users.update({"username":"SallySmith"},{$set: {"username": SallySmith}})
+
+db.users.insert({"username":"JimmyHagen", "full_name": {"first":"Jimmy", "last":"Hagen"}})
 
 
+// Insert the following documents into a posts collection:
+
+db.posts.insertOne({"username": "SallySmith", "title":"Passes out at party", "body":"Wakes up early and cleans house"})
+
+// Insert the following documents into a comments collection
+// where [post_obj_id] is the ObjectId of the posts document: "Borrows something"
+
+db.comments.insertOne({"username":"SallySmith", "comment":"Hope you got a good deal!", "post": {$ref: "posts", $id: ObjectId("63a0c0b364fdb252d5f13821")}})
+
+db.comments.insertOne({"username":"SallySmith", "comment":"Hope you got a good deal!", "post": ObjectId("63a0c0cb64fdb252d5f13821")})
+
+// where [post_obj_id] is the ObjectId of the posts document: "Borrows everything"
+
+db.comments.insertOne({"username":"SallySmith", "comment":"What's mine is yours!", "post": {$ref: "posts", $id: ObjectId("63a0c0b364fdb252d5f13822")}})
 
 
+// where [post_obj_id] is the ObjectId of the posts document: "Forks your repo on github"
 
+db.comments.insertOne({"username":"SallySmith", "comment":"Don't violate the licensing agreement!", "post": {$ref: "posts", $id: ObjectId("63a0c0e764fdb252d5f13823")}})
+
+
+// where [post_obj_id] is the ObjectId of the posts document: "Passes out at party"
+
+db.comments.insertOne({"username":"JimmyHagen", "comment":"It still isn't clean", "post": {$ref: "posts", $id: ObjectId("63a0c01b64fdb252d5f1381e")}})
+
+
+// where [post_obj_id] is the ObjectId of the posts document: "Reports a bug in your code"
+
+db.comments.insertOne({"username":"JimmyHagen", "comment":"Denied your PR cause I found a hack", "post": {$ref: "posts", $id: ObjectId("63a0c08664fdb252d5f13820")}})
+
+
+                            // Querying related collections
+
+
+// find all users
+
+db.users.find()
+
+
+// find all posts
+
+db.posts.find()
+
+
+// find all posts authored by "SallySmith"
+
+db.posts.find({"username":"SallySmith"})
+
+
+// find all posts authored by "JimmyHagen"
+
+db.posts.find({"username":"JimmyHagen"})
+
+
+// find all comments
+db.comments.find()
+
+
+// find all comments authored by "SallySmith"
+
+db.comments.find({"username":"SallySmith"})
+
+
+// find all comments authored by "JimmyHagen"
+
+db.comments.find({"username":"JimmyHagen"})
+
+
+// find all comments belonging to the post "Reports a bug in your code"
+
+db.comments.find({"title":"Reports a bug in your code"})
 
