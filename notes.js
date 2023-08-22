@@ -96,8 +96,7 @@ db.movies.deleteOne({"title":"Pee Wee Herman's Big Adventure"})
 
 db.movies.deleteOne({"title":"Avatar"})
 
-
-                                // Relationships
+// -------------------------- Relationships -----------------------------------------------------
 
 // Insert the following documents into a user's collection:
 
@@ -137,7 +136,7 @@ db.comments.insertOne({"username":"JimmyHagen", "comment":"It still isn't clean"
 db.comments.insertOne({"username":"JimmyHagen", "comment":"Denied your PR cause I found a hack", "post": {$ref: "posts", $id: ObjectId("63a0c08664fdb252d5f13820")}})
 
 
-                            // Querying related collections
+// ------------------ Querying related collections --------------------------
 
 
 // find all users
