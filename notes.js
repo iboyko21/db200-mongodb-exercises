@@ -85,7 +85,7 @@ db.movies.find({"synopsis": {$regex: "gold", $regex: "dragon"}})
 
 
 
-                            // Delete Documents
+// ------------------ Delete Documents -----------------------
 
 // delete the movie "Pee Wee Herman's Big Adventure"
 
