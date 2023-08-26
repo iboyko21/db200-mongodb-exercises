@@ -56,7 +56,7 @@ db.movies.updateOne({"title":"The Hobbit: The Desolation of Smaug"}, {$set: {"sy
 db.movies.updateOne({ "title":"Pulp Fiction" },{ $push: {"actors": "Samuel L. Jackson"} })
 
 
-// Text Search
+// -------------------------- Text Search --------------------------------------------
 
 // find all movies that have a synopsis that contains the word "Bilbo"
 
