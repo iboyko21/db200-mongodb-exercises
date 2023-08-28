@@ -39,7 +39,7 @@ db.movies.find({"year": {$gte: 1990, $lte: 1999} })
 db.movies.find({ $or: [{"year": {$lt: 2000}}, {"year": {$gt: 2010}}]})
 
 
-                        // Update Documents
+// ----------------- Update Documents -------------------------------------------------
 
 // add a synopsis to "The Hobbit: An Unexpected Journey" : "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."
 
