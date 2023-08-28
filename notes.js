@@ -1,12 +1,12 @@
-// MongoDB Exercises
+// ---------------------- MongoDB Exercises --------------------------------------
                         
-// Insert Documents
+// ------------------------- Insert Documents -----------------------------------
 
 // Insert the following documents into a movies collection.
 
 db.movies.insert({"title": "Star Wars", "writer": "George Lucas", "year": 1997, "actors": ["Mark Hamill", "Harrison Ford", "Carrie Fisher", "Peter Cushing", "James Earl Jones"]})
 
-// Query / Find Documents
+// --------------------------- Query / Find Documents -------------------------------
 
 // query the movies collection to:
 // get all documents
