@@ -1,10 +1,12 @@
 // ---------------------- MongoDB Exercises --------------------------------------
+
                         
 // ------------------------- Insert Documents -----------------------------------
 
 // Insert the following documents into a movies collection.
 
 db.movies.insert({"title": "Star Wars", "writer": "George Lucas", "year": 1997, "actors": ["Mark Hamill", "Harrison Ford", "Carrie Fisher", "Peter Cushing", "James Earl Jones"]})
+
 
 // --------------------------- Query / Find Documents -------------------------------
 
@@ -95,6 +97,7 @@ db.movies.deleteOne({"title":"Pee Wee Herman's Big Adventure"})
 // delete the movie "Avatar"
 
 db.movies.deleteOne({"title":"Avatar"})
+
 
 // -------------------------- Relationships -----------------------------------------------------
 
